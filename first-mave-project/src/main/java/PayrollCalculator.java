@@ -25,7 +25,7 @@ public class PayrollCalculator {
 
         System.out.printf("%s, your gross pay for this week is: %.2f" , name ,grossPay);
 
-
+        scanner.close();
 
     }
 }
