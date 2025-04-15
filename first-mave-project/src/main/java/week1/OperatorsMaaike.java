@@ -1,3 +1,5 @@
+package week1;
+
 public class OperatorsMaaike {
     public static void main(String[] args) {
 

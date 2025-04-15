@@ -1,3 +1,5 @@
+package week1;
+
 public class bonus{
 public static void main(String[] args) {
     int a = 7;
