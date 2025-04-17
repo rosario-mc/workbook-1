@@ -21,7 +21,7 @@ public class stringAnalyzer {
         char lastCharacter = getLast(sentence);
         System.out.println(firstCharacter + ": is the first character of the sentence.");
         System.out.println(lastCharacter + ": is the last character of the sentence.");
-
+        scanner.close();
     }
 
     public static String getSentence(String prompt) {
