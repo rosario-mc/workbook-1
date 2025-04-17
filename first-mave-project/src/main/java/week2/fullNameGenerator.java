@@ -27,7 +27,6 @@ public class fullNameGenerator {
         //display
         String fullName = displayFullName(fullName1);
 
-
     }
 
         public static String getFirstName(){
