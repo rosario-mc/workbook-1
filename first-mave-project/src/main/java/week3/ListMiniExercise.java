@@ -25,14 +25,16 @@ public class ListMiniExercise {
         numbers.add(21);
         printNumberList(numbers);
 
-        List<String> books = new ArrayList<>();
-        books.add("Harry Potter Series");
-        books.add("Hunger Games Series");
-        books.add("Twilight Saga");
+        List<Book> books = new ArrayList<>();
+        //Book b1 = new Book("Harry Potter Series", "J.K. Rowling");
+        books.add(new Book("Harry Potter Series", "J.K. Rowling"));
+        books.add(new Book("Twilight Saga", "Stephenie Meyer"));
+        books.add(new Book("Hunger Games Series", "Suzanne Collins"));
+
         printBookList(books);
 
         books.remove(1);
-        books.add("Chronicles of Narnia");
+        books.add(new Book("Chronicles of Narnia", "C.S. Lewis"));
         printBookList(books);
 
 
@@ -49,9 +51,10 @@ public class ListMiniExercise {
         }
     }
 
-    public static void printBookList(List <String> bookList){
+    public static void printBookList(List <Book> bookList){
         for(int i = 0; i < bookList.size(); i++){
-            System.out.println("Book " + (i + 1) + ": " + bookList.get(i));
+            Book book = bookList.get(i);
+            System.out.println("Book " + (i + 1) + ": " + book.getTitle() + " by " + book.getAuthor());
         }
     }
 
