@@ -31,7 +31,7 @@ public class Match {
         Player starPlayer = players.get((int)(Math.random() * players.size()));
 
         System.out.println("Match: " +team1.getName() + " vs. " + team2.getName() );
-        System.out.println("Winner: " + teamWinner.getName() + "\nWinning Run Scored By: " + starPlayer.getName() +"\n");
+        System.out.println("Winner: " + teamWinner.getName() + "\nWinning Run Scored By: " + starPlayer.getPosition() + " " + starPlayer.getName() + " #" + starPlayer.getNumber() + "\n");
     }
 
     public Team getTeamWinner(){

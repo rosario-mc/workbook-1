@@ -1,6 +1,5 @@
 package week5.sportTournament;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TournamentInfo {
@@ -54,6 +53,6 @@ public class TournamentInfo {
     }
 
     public List<Round> getRounds() {
-        return List.of(round1, round2, round3, round4); // or however many rounds you use
+        return List.of(round1, round2, round3, round4);
     }
 }

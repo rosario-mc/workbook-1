@@ -17,7 +17,6 @@ public class Main {
                 tournamentInfo.team8
         );
 
-        // You don't need to use the rounds from TournamentInfo anymore
         Tournament tournament = new Tournament("World Series", teams);
         tournament.startTournament();
     }
