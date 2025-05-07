@@ -1,0 +1,136 @@
+Step 1:
+(Reptiles)
+Snakes
+Chameleon
+Lizards
+Turtles
+(People)
+Worker/Volunteer
+Customer
+
+
+
+Step 2:
+
+Snake:
+name
+species
+age
+length
+diet
+temperament
+venomous
+adoption status
+can shed skin
+feed (daily/weekly)
+hiss
+need heat lamp
+
+name: Nagini
+species: hognose
+age: 5
+length: 1ft
+diet: rodent
+temperament: docile
+venomous: no
+adoption status: available
+can shed skin: yes
+feed (daily/weekly): weekly
+hiss: yes
+slither: yes
+need heat lamp: yes
+
+
+Chameleon:
+name
+species
+age
+size
+diet
+temperament
+adoption status
+can shed skin
+feed (daily/weekly)
+climb
+
+name: Wednesday
+species: Veiled chameleon
+age: 2
+size: 6in
+diet: insects
+temperament: docile
+adoption status: available
+can shed skin: yes
+feed (daily/weekly): daily
+climb: yes
+need heat lamp: yes
+
+
+Lizard:
+name
+species
+age
+size
+diet
+temperament
+venomous
+adoption status
+can shed skin
+feed (daily/weekly)
+need heat lamp
+
+name: Smiley
+species: Crested gecko
+age: 1
+size: 4in
+diet: insects
+temperament: docile
+venomous: no
+adoption status: available
+can shed skin: yes
+feed (daily/weekly): daily
+need heat lamp: yes
+
+
+Turtles:
+name
+species
+age
+size
+diet
+temperament
+aquatic
+venomous
+adoption status
+can shed skin
+feed (daily/weekly)
+need heat lamp
+swim
+
+name: Bob
+species: RES
+age: 6
+size: 5in
+diet: live fish
+temperament: docile
+aquatic: yes
+venomous: no
+adoption status: available
+can shed skin: yes
+feed (daily/weekly): every other day
+need heat lamp: yes
+swim: yes
+
+
+
+Worker/Volunteer:
+name
+age
+fed reptiles
+cleaned cage
+
+
+Customer:
+name
+age
+reptile interested in

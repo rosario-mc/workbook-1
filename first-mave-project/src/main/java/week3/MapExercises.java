@@ -55,8 +55,6 @@ public class MapExercises {
             }
             return nameAndAge;
         }
-        public static Map<String, Pet> getOwnerAndPet(){
+       // public static Map<String, Pet> getOwnerAndPet(){
             Map<String, Pet> ownerAndPet = new HashMap<>();
         }
-
-}
