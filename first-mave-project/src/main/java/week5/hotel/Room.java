@@ -51,8 +51,11 @@ public class Room {
     }
 
     public void checkIn() {
-       setDirty(true);
-       setOccupied(true);
+        if (!dirty) {
+            occupied = true;
+        } else {
+            System.out.println("Room is dirty. Cannot check in.");
+        }
     }
 
     public void checkout() {
