@@ -94,12 +94,6 @@ class EmployeeTest {
     }
 
     @Test
-    void testPunchIn() {
-        double expectedStartTime = 12;
-        assertEquals(expectedStartTime, employee.getStartTime);
-    }
-
-    @Test
     void testPunchout() {
         double expectedHoursWorked = 12;
         employee.punchIn(10);

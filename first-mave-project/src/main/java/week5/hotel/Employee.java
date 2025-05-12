@@ -75,9 +75,6 @@ public class Employee {
         startTime = time;
     }
 
-    public void getStartTime(double time){
-        return startTime;
-    }
 
     public void punchout(double time){
         hoursWorked += time - startTime;
