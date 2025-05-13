@@ -5,15 +5,14 @@ public class Hovercraft extends AmphibiousVehicle{
     private String skirtFingers;
     private boolean controlCabin;
 
-    public Hovercraft(int speed, int nrOfSeats, int nrOfPassenger, int cargoCapacity, int fuelCapacity, double weight, String vehicleName, String color, String transmission, String engine, String fuelType, boolean GPS, boolean radar, String wheelsOrTracks, boolean driveOnLandAndWater, int nrOfPropellers, String skirtFingers, boolean controlCabin) {
-        super(speed, nrOfSeats, nrOfPassenger, cargoCapacity, fuelCapacity, weight, vehicleName, color, transmission, engine, fuelType, GPS, radar, wheelsOrTracks, driveOnLandAndWater);
+    public Hovercraft(int speed, int nrOfSeats, int nrOfPassenger, int cargoCapacity, int fuelCapacity, double weight, String vehicleType, String vehicleIdentificationType, String vehicleName, String color, String transmission, String engine, String fuelType, boolean GPS, boolean radar, String wheelsOrTracks, boolean driveOnLandAndWater, int nrOfPropellers, String skirtFingers, boolean controlCabin) {
+        super(speed, nrOfSeats, nrOfPassenger, cargoCapacity, fuelCapacity, weight, vehicleType, vehicleIdentificationType, vehicleName, color, transmission, engine, fuelType, GPS, radar, wheelsOrTracks, driveOnLandAndWater);
         this.nrOfPropellers = nrOfPropellers;
         this.skirtFingers = skirtFingers;
         this.controlCabin = controlCabin;
     }
 
     public int getNrOfPropellers() {
-        System.out.println(getVehicleName() + " has " + getNrOfPropellers() + " propellers.");
         return nrOfPropellers;
     }
 
@@ -30,11 +29,6 @@ public class Hovercraft extends AmphibiousVehicle{
     }
 
     public boolean isControlCabin() {
-        if( controlCabin){
-            System.out.println("There is a spacious control cabin for the driver.");
-        } else {
-            System.out.println("There is no control cabin.");
-        }
         return controlCabin;
     }
 
@@ -45,9 +39,8 @@ public class Hovercraft extends AmphibiousVehicle{
     @Override
     public String toString() {
         return super.toString() +
-                "\n--- Hovercraft Features ---" +
                 "\nNumber of Propellers : " + nrOfPropellers +
                 "\nSkirt Fingers        : " + skirtFingers +
-                "\nControl Cabin        : " + (controlCabin ? "Yes" : "No");
+                "\nControl Cabin        : " + (controlCabin ? "Yes" : "No\n\n");
     }
 }

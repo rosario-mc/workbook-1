@@ -7,6 +7,8 @@ public class Vehicle {
     private int cargoCapacity;
     private int fuelCapacity;
     private double weight;
+    private String vehicleType;
+    private String vehicleIdentificationType;
     private String vehicleName;
     private String color;
     private String transmission;
@@ -15,13 +17,15 @@ public class Vehicle {
     private boolean GPS;
     private boolean radar;
 
-    public Vehicle(int speed, int nrOfSeats, int nrOfPassenger, int cargoCapacity, int fuelCapacity, double weight, String vehicleName, String color, String transmission, String engine, String fuelType, boolean GPS, boolean radar) {
+    public Vehicle(int speed, int nrOfSeats, int nrOfPassenger, int cargoCapacity, int fuelCapacity, double weight, String vehicleType, String vehicleIdentificationType, String vehicleName, String color, String transmission, String engine, String fuelType, boolean GPS, boolean radar) {
         this.speed = speed;
         this.nrOfSeats = nrOfSeats;
         this.nrOfPassenger = nrOfPassenger;
         this.cargoCapacity = cargoCapacity;
         this.fuelCapacity = fuelCapacity;
         this.weight = weight;
+        this.vehicleType = vehicleType;
+        this.vehicleIdentificationType = vehicleIdentificationType;
         this.vehicleName = vehicleName;
         this.color = color;
         this.transmission = transmission;
@@ -32,7 +36,6 @@ public class Vehicle {
     }
 
     public int getSpeed() {
-        System.out.println(getVehicleName() + " has a maximum speed of " + getSpeed() + " mph.");
         return speed;
     }
 
@@ -41,7 +44,6 @@ public class Vehicle {
     }
 
     public int getNrOfSeats() {
-        System.out.println(getVehicleName() + " has " + getNrOfSeats() + " number of seats.");
         return nrOfSeats;
     }
 
@@ -50,7 +52,6 @@ public class Vehicle {
     }
 
     public int getNrOfPassenger() {
-        System.out.println(getNrOfPassenger() + " fits in the " + getVehicleName() + ".");
         return nrOfPassenger;
     }
 
@@ -59,7 +60,6 @@ public class Vehicle {
     }
 
     public int getCargoCapacity() {
-        System.out.println(" is the cargo capacity for this vehicle.");
         return cargoCapacity;
     }
 
@@ -68,7 +68,6 @@ public class Vehicle {
     }
 
     public int getFuelCapacity() {
-        System.out.println(getVehicleName() + " has a fuel capacity of " + getFuelCapacity() + ".");
         return fuelCapacity;
     }
 
@@ -77,12 +76,27 @@ public class Vehicle {
     }
 
     public double getWeight() {
-        System.out.println(getVehicleName() + " weighs " + getWeight() + " lbs.");
         return weight;
     }
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public String getVehicleIdentificationType() {
+        return vehicleIdentificationType;
+    }
+
+    public void setVehicleIdentificationType(String vehicleIdentificationType) {
+        this.vehicleIdentificationType = vehicleIdentificationType;
     }
 
     public String getVehicleName() {
@@ -94,7 +108,6 @@ public class Vehicle {
     }
 
     public String getColor() {
-        System.out.println(getVehicleName() + " is " + getColor() + ".");
         return color;
     }
 
@@ -103,11 +116,6 @@ public class Vehicle {
     }
 
     public String getTransmission() {
-        if (transmission.equalsIgnoreCase("automatic")) {
-            System.out.println(getVehicleName() + " has an automatic transmission.");
-        } else {
-            System.out.println(getVehicleName() + " has a manual transmission.");
-        }
         return transmission;
     }
 
@@ -129,15 +137,9 @@ public class Vehicle {
 
     public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
-        System.out.println( getVehicleName() + " uses " + fuelType + " for fuel.");
     }
 
     public boolean isGPS() {
-        if (GPS){
-            System.out.println("Vehicle has GPS available.");
-        } else {
-            System.out.println("Does not have GPS.");
-        }
         return GPS;
     }
 
@@ -146,11 +148,6 @@ public class Vehicle {
     }
 
     public boolean isRadar() {
-        if (radar){
-            System.out.println("Vehicle has radar available.");
-        } else {
-            System.out.println("Does not have radar.");
-        }
         return radar;
     }
 
@@ -164,19 +161,21 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "\n--- Vehicle Details ---" +
-                "\nName          : " + vehicleName +
-                "\nColor         : " + color +
-                "\nTransmission  : " + transmission +
-                "\nEngine        : " + engine +
-                "\nFuel Type     : " + fuelType +
-                "\nSpeed         : " + speed + " mph" +
-                "\nSeats         : " + nrOfSeats +
-                "\nPassengers    : " + nrOfPassenger +
-                "\nCargo Capacity: " + cargoCapacity + " lbs" +
-                "\nFuel Capacity : " + fuelCapacity + " gallons" +
-                "\nWeight        : " + weight + " lbs" +
-                "\nGPS           : " + (GPS ? "Yes" : "No") +
-                "\nRadar         : " + (radar ? "Yes" : "No");
+        return "\n\n=============VEHICLE DETAILS============" +
+                "\nVEHICLE         : " + vehicleType +
+                "\nTYPE            : " + vehicleIdentificationType +
+                "\nNAME            : " + vehicleName +
+                "\nCOLOR           : " + color +
+                "\nTRANSMISSION    : " + transmission +
+                "\nENGINE          : " + engine +
+                "\nFUEL TYPE       : " + fuelType +
+                "\nSPEED           : " + speed + " MPH" +
+                "\nSEATS           : " + nrOfSeats +
+                "\nPASSENGERS      : " + nrOfPassenger +
+                "\nCARGO CAPACITY  : " + cargoCapacity + " LBS" +
+                "\nFUEL CAPACITY   : " + fuelCapacity + " GALLONS" +
+                "\nWEIGHT          : " + weight + " LBS" +
+                "\nGPS             : " + (GPS ? "YES" : "NO") +
+                "\nRADAR           : " + (radar ? "YES" : "NO");
     }
 }

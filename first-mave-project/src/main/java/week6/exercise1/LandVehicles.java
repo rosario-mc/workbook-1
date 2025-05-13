@@ -8,8 +8,8 @@ public class LandVehicles extends Vehicle{
     private boolean AC;
     private boolean rearViewMirrors;
 
-    public LandVehicles(int speed, int nrOfSeats, int nrOfPassenger, int cargoCapacity, int fuelCapacity, double weight, String vehicleName, String color, String transmission, String engine, String fuelType, boolean GPS, boolean radar, int nrOfWheels, int nrOfDoors, int nrOfWindows, boolean electric, boolean AC, boolean rearViewMirrors) {
-        super(speed, nrOfSeats, nrOfPassenger, cargoCapacity, fuelCapacity, weight, vehicleName, color, transmission, engine, fuelType, GPS, radar);
+    public LandVehicles(int speed, int nrOfSeats, int nrOfPassenger, int cargoCapacity, int fuelCapacity, double weight, String vehicleType, String vehicleIdentificationType, String vehicleName, String color, String transmission, String engine, String fuelType, boolean GPS, boolean radar, int nrOfWheels, int nrOfDoors, int nrOfWindows, boolean electric, boolean AC, boolean rearViewMirrors) {
+        super(speed, nrOfSeats, nrOfPassenger, cargoCapacity, fuelCapacity, weight, vehicleType, vehicleIdentificationType, vehicleName, color, transmission, engine, fuelType, GPS, radar);
         this.nrOfWheels = nrOfWheels;
         this.nrOfDoors = nrOfDoors;
         this.nrOfWindows = nrOfWindows;
@@ -52,11 +52,6 @@ public class LandVehicles extends Vehicle{
     }
 
     public boolean isAC() {
-        if (AC){
-            System.out.println(getVehicleName() + " has AC capabilities.");
-        } else {
-            System.out.println(getVehicleName() + " has no AC capabilities.");
-        }
         return AC;
     }
 
@@ -65,11 +60,6 @@ public class LandVehicles extends Vehicle{
     }
 
     public boolean isRearViewMirrors() {
-        if (rearViewMirrors){
-            System.out.println(getVehicleName() + "has rear view mirrors.");
-        }else{
-            System.out.println(getVehicleName() + "has no rear view mirrors. Please drive safe and double check before backing up.");
-        }
         return rearViewMirrors;
     }
 
@@ -80,7 +70,6 @@ public class LandVehicles extends Vehicle{
     @Override
     public String toString() {
         return super.toString() +
-                "\n--- Land Vehicle Features ---" +
                 "\nWheels        : " + nrOfWheels +
                 "\nDoors         : " + nrOfDoors +
                 "\nWindows       : " + nrOfWindows +
