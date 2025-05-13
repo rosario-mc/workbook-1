@@ -70,11 +70,11 @@ public class LandVehicles extends Vehicle{
     @Override
     public String toString() {
         return super.toString() +
-                "\nWheels        : " + nrOfWheels +
-                "\nDoors         : " + nrOfDoors +
-                "\nWindows       : " + nrOfWindows +
-                "\nElectric      : " + (electric ? "Yes" : "No") +
-                "\nAC            : " + (AC ? "Yes" : "No") +
-                "\nRear View Mirrors: " + (rearViewMirrors ? "Yes" : "No");
+                String.format("%-25s: %d\n", "WHEELS", nrOfWheels) +
+                String.format("%-25s: %d\n", "DOORS", nrOfDoors) +
+                String.format("%-25s: %d\n", "WINDOWS", nrOfWindows) +
+                String.format("%-25s: %s\n", "ELECTRIC", electric ? "YES" : "NO") +
+                String.format("%-25s: %s\n", "AC", AC ? "YES" : "NO") +
+                String.format("%-25s: %s\n", "REAR VIEW MIRRORS", rearViewMirrors ? "YES" : "NO");
     }
 }

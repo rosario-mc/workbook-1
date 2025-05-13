@@ -161,21 +161,21 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "\n\n=============VEHICLE DETAILS============" +
-                "\nVEHICLE         : " + vehicleType +
-                "\nTYPE            : " + vehicleIdentificationType +
-                "\nNAME            : " + vehicleName +
-                "\nCOLOR           : " + color +
-                "\nTRANSMISSION    : " + transmission +
-                "\nENGINE          : " + engine +
-                "\nFUEL TYPE       : " + fuelType +
-                "\nSPEED           : " + speed + " MPH" +
-                "\nSEATS           : " + nrOfSeats +
-                "\nPASSENGERS      : " + nrOfPassenger +
-                "\nCARGO CAPACITY  : " + cargoCapacity + " LBS" +
-                "\nFUEL CAPACITY   : " + fuelCapacity + " GALLONS" +
-                "\nWEIGHT          : " + weight + " LBS" +
-                "\nGPS             : " + (GPS ? "YES" : "NO") +
-                "\nRADAR           : " + (radar ? "YES" : "NO");
+        return "\n\n============= VEHICLE DETAILS =============\n" +
+                String.format("%-25s: %s\n", "VEHICLE TYPE", vehicleType) +
+                String.format("%-25s: %s\n", "IDENTIFICATION", vehicleIdentificationType) +
+                String.format("%-25s: %s\n", "NAME", vehicleName) +
+                String.format("%-25s: %s\n", "COLOR", color) +
+                String.format("%-25s: %s\n", "TRANSMISSION", transmission) +
+                String.format("%-25s: %s\n", "ENGINE", engine) +
+                String.format("%-25s: %s\n", "FUEL TYPE", fuelType) +
+                String.format("%-25s: %d MPH\n", "MAX SPEED", speed) +
+                String.format("%-25s: %d\n", "SEATING CAPACITY", nrOfSeats) +
+                String.format("%-25s: %d\n", "PASSENGERS", nrOfPassenger) +
+                String.format("%-25s: %d LBS\n", "CARGO CAPACITY", cargoCapacity) +
+                String.format("%-25s: %d GALLONS\n", "FUEL CAPACITY", fuelCapacity) +
+                String.format("%-25s: %.2f LBS\n", "WEIGHT", weight) +
+                String.format("%-25s: %s\n", "GPS", GPS ? "YES" : "NO") +
+                String.format("%-25s: %s\n", "RADAR", radar ? "YES" : "NO");
     }
 }

@@ -19,6 +19,6 @@ public class SemiTruck extends LandVehicles{
     @Override
     public String toString() {
         return super.toString() +
-                "\nSleeping Quarters: " + (sleepingQuarters ? "Yes" : "No\n\n");
+                String.format("%-25s: %s\n\n", "SLEEPING QUARTERS", sleepingQuarters ? "YES" : "NO");
     }
 }

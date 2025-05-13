@@ -39,8 +39,8 @@ public class Hovercraft extends AmphibiousVehicle{
     @Override
     public String toString() {
         return super.toString() +
-                "\nNumber of Propellers : " + nrOfPropellers +
-                "\nSkirt Fingers        : " + skirtFingers +
-                "\nControl Cabin        : " + (controlCabin ? "Yes" : "No\n\n");
+                String.format("%-25s: %d\n", "NUMBER OF PROPELLERS", nrOfPropellers) +
+                String.format("%-25s: %s\n", "SKIRT FINGERS", skirtFingers) +
+                String.format("%-25s: %s\n\n", "CONTROL CABIN", controlCabin ? "YES" : "NO");
     }
 }

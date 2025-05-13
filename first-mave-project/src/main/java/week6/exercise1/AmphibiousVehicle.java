@@ -25,11 +25,10 @@ public class AmphibiousVehicle extends Vehicle{
     public void setDriveOnLandAndWater(boolean driveOnLandAndWater) {
         this.driveOnLandAndWater = driveOnLandAndWater;
     }
-
     @Override
     public String toString() {
         return super.toString() +
-                "\nWheels/Tracks  : " + wheelsOrTracks +
-                "\nDrive on Land & Water: " + (driveOnLandAndWater ? "Yes" : "No");
+                String.format("%-25s: %s\n", "WHEELS/TRACKS", wheelsOrTracks) +
+                String.format("%-25s: %s\n", "DRIVE ON LAND & WATER", driveOnLandAndWater ? "YES" : "NO");
     }
 }

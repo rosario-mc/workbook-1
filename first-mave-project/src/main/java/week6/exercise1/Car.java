@@ -28,7 +28,7 @@ public class Car extends LandVehicles{
     @Override
     public String toString() {
         return super.toString() +
-                "\nSunroof       : " + (sunroof ? "Yes" : "No") +
-                "\nTrunk         : " + (trunk ? "Yes" : "No\n\n");
+                String.format("%-25s: %s\n", "SUNROOF", sunroof ? "YES" : "NO") +
+                String.format("%-25s: %s\n\n", "TRUNK", trunk ? "YES" : "NO");
     }
 }

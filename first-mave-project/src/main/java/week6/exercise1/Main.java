@@ -13,7 +13,5 @@ public class Main {
 
         Hovercraft hovercraft1 = new Hovercraft(200, 10, 11, 5000, 20, 8000,  "AMPHIBIOUS VEHICLE", "HOVERCRAFT", "SR.N4", "BLACK", "MANUAL", "HIRTH 2703", "DIESEL", true, true, "TRACKS", true, 4,"BLACK SKIRT FINGER", true);
         System.out.println(hovercraft1);
-
-
     }
 }

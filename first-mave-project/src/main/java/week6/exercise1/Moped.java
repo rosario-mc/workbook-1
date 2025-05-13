@@ -29,7 +29,7 @@ public class Moped extends LandVehicles{
     @Override
     public String toString() {
         return super.toString() +
-                "\nKickstand     : " + (kickstand ? "Yes" : "No") +
-                "\nHandlebars    : " + (handleBars ? "Yes" : "No\n\n");
+                String.format("%-25s: %s\n", "KICKSTAND", kickstand ? "YES" : "NO") +
+                String.format("%-25s: %s\n\n", "HANDLEBARS", handleBars ? "YES" : "NO");
     }
 }
