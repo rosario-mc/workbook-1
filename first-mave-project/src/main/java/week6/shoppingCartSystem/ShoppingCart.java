@@ -14,7 +14,7 @@ public class ShoppingCart {
         double totalPrice = 0;
 
         System.out.printf("%-25s %10s%n", "ITEM", "PRICE");
-        System.out.println("------------------------------------------");
+        System.out.println("---------------------------------------");
 
         for (Product i : items) {
             double priceToUse;
@@ -30,7 +30,12 @@ public class ShoppingCart {
             totalPrice += priceToUse;
         }
 
-        System.out.println("------------------------------------------");
-        System.out.printf("%-25s $%9.2f%n", "TOTAL", totalPrice);
+        double taxAmount = totalPrice * 0.21;
+        double totalAfterTax = totalPrice + taxAmount;
+
+        System.out.println("---------------------------------------");
+        System.out.printf("%-25s $%9.2f%n", "TOTAL BEFORE TAX", totalPrice);
+        System.out.printf("%-25s $%9.2f%n", "TAX (21%)", taxAmount);
+        System.out.printf("%-25s $%9.2f%n", "TOTAL AFTER TAX", totalAfterTax);
     }
 }
