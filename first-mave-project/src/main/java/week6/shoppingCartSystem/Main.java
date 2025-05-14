@@ -12,6 +12,6 @@ public class Main {
         cart.addItem(new DiscountedProduct("PASTA", 1.99));
         cart.addItem(new DiscountedProduct("PROTEIN POWDER", 25.99));
 
-        cart.printReciept();
+        cart.printReceipt();
     }
 }

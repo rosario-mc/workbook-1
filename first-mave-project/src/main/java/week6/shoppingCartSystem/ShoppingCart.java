@@ -10,22 +10,27 @@ public class ShoppingCart {
         items.add(item);
     }
 
-    public void printReciept() {
+    public void printReceipt() {
         double totalPrice = 0;
 
-        System.out.printf("%-25s %-50s%n", "ITEM", "PRICE");
-        System.out.println("------------------------------------");
+        System.out.printf("%-25s %10s%n", "ITEM", "PRICE");
+        System.out.println("------------------------------------------");
 
-        for (Product i : items){
-            System.out.printf(
-                    "%-25s $%-50.2f%n",
-                    i.getName(),
-                    i.getPrice()
-            );
-            totalPrice += i.getPrice();
+        for (Product i : items) {
+            double priceToUse;
+
+            if (i instanceof DiscountedProduct) {
+                DiscountedProduct dp = (DiscountedProduct) i;
+                priceToUse = dp.getFinalPrice();
+            } else {
+                priceToUse = i.getPrice();
+            }
+
+            System.out.printf("%-25s $%9.2f%n", i.getName(), priceToUse);
+            totalPrice += priceToUse;
         }
 
-        System.out.println("------------------------------------");
-        System.out.printf("%-25s $%.2f%n", "TOTAL", totalPrice);
+        System.out.println("------------------------------------------");
+        System.out.printf("%-25s $%9.2f%n", "TOTAL", totalPrice);
     }
 }
