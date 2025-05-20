@@ -17,7 +17,7 @@ public class FinanceApplication {
         Portfolio portfolio = new Portfolio("Rosario", "My Portfolio");
 
         while (true) {
-            System.out.println("\nWould you like to add a new asset? (yes/no)");
+            System.out.println("Would you like to add a new asset? (yes/no)");
             String response = input.nextLine();
 
             if (response.equalsIgnoreCase("no")) {

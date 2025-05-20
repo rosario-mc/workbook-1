@@ -40,4 +40,9 @@ public class BankAccount implements Valuable{
     public String toString() {
         return getName() + " worth $" + String.format("%.2f", getValue());
     }
+
+    @Override
+    public int compareTo(Valuable other) {
+        return Double.compare(this.getValue(), other.getValue());
+    }
 }

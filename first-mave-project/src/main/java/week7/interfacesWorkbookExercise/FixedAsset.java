@@ -1,6 +1,6 @@
 package week7.interfacesWorkbookExercise;
 
-public abstract class FixedAsset implements Valuable {
+public abstract class FixedAsset implements Valuable, Comparable<Valuable> {
     private String name;
     private double marketValue;
 
@@ -28,5 +28,10 @@ public abstract class FixedAsset implements Valuable {
     @Override
     public double getValue() {
         return getMarketValue();
+    }
+
+    @Override
+    public int compareTo(Valuable other) {
+        return Double.compare(this.getValue(), other.getValue());
     }
 }

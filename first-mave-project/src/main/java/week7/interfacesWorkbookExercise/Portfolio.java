@@ -1,6 +1,7 @@
 package week7.interfacesWorkbookExercise;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Portfolio {
@@ -43,12 +44,13 @@ public class Portfolio {
 
     public double getValue() {
         double totalValue = 0;
-        for(Valuable valuable : valuableList) {
+        for (Valuable valuable : valuableList) {
             totalValue += valuable.getValue();
         }
         return totalValue;
     }
 
+    /*
     public Valuable getMostValuable() {
         if (valuableList.isEmpty()) {
             return null;
@@ -75,5 +77,15 @@ public class Portfolio {
             }
         }
         return leastValuable;
+    }
+     */
+    public Valuable getMostValuable() {
+        if (valuableList.isEmpty()) return null;
+        return Collections.max(valuableList);
+    }
+
+    public Valuable getLeastValuable() {
+        if (valuableList.isEmpty()) return null;
+        return Collections.min(valuableList);
     }
 }
