@@ -1,0 +1,84 @@
+7 Exercises Using HAVING
+1. Which products have been ordered more than 200 times in total?
+SELECT SUM(Quantity), ProductID FROM northwind.`order details`
+GROUP BY ProductID
+HAVING SUM(Quantity) > 200;
+
+2. Which customers have placed more than 10 orders?
+SELECT COUNT(*), CustomerID FROM northwind.orders
+GROUP BY CustomerID
+HAVING COUNT(*) > 10;
+
+3. List suppliers who supply more than 5 products.
+SELECT COUNT(*), SupplierID FROM northwind.products
+GROUP BY SupplierID
+HAVING COUNT(*) >= 5;
+
+4. Find categories that contain at least one product with an average unit price above 40.
+SELECT AVG(UnitPrice), CategoryID FROM northwind.products
+GROUP BY CategoryID
+HAVING AVG(UnitPrice) > 40;
+
+5. List order IDs where the total quantity ordered exceeds 100.
+SELECT SUM(Quantity), OrderID FROM northwind.`order details`
+GROUP BY OrderID
+HAVING SUM(Quantity) > 100;
+
+//6. Find all customers whose average order quantity is less than 20.
+
+7. Which products have an average ordered quantity between 20 and 40?
+SELECT AVG(Quantity), ProductID FROM northwind.`order details`
+GROUP BY ProductID
+HAVING AVG(Quantity) BETWEEN 20 AND 40;
+
+
+🧠 15 Exercises with Inner Queries (Progressive Difficulty)
+🧩 Level 1: Single-Level Inner Queries
+1. Find the product names of products that have the highest unit price.
+SELECT UnitPrice, ProductName FROM northwind.products
+WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM northwind.products);
+
+2. Find all customers who placed the most recent order.
+SELECT OrderDate, CustomerID FROM northwind.orders
+WHERE OrderDate = (SELECT MAX(OrderDate) FROM northwind.orders);
+
+3. List all products that have never been ordered.
+SELECT ProductID FROM northwind.products
+WHERE ProductID NOT IN (SELECT DISTINCT ProductID FROM northwind.`order details`);
+
+4. Find the name of the supplier who supplies the most expensive product.
+SELECT CompanyName FROM northwind.suppliers
+WHERE SupplierID IN (SELECT SupplierID FROM northwind.products
+WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM northwind.products));
+
+5. List all orders where the quantity ordered was more than the average quantity of all orders.
+SELECT OrderID FROM northwind.orders
+WHERE OrderID IN (SELECT OrderID FROM northwind.`order details`
+WHERE Quantity > (SELECT AVG(Quantity) FROM northwind.`order details`));
+
+🧩 Level 2: Two Nested Queries
+6. Find the product names of all products that were ordered in the order with the highest total quantity.
+SELECT ProductName FROM northwind.products
+WHERE ProductID IN (SELECT ProductID FROM northwind.`order details`
+WHERE Quantity = (SELECT MAX(Quantity) FROM northwind.`order details`));
+
+7. List all customers who have only placed one order.
+SELECT CustomerID FROM northwind.orders
+WHERE OrderID = (SELECT COUNT(OrderID) < 1);
+
+8. Find the average unit price of products ordered by customers from London.
+
+9. Find names of customers who have ordered a product with less than 10 units in stock.
+
+10. Find categories where at least one product was ordered in quantity over 50.
+
+🧩 Level 3: Three-Level Inner Queries
+11. List the product name(s) that were ordered in the first order placed by the customer who placed the last order.
+
+12. Find customers who have ordered the product with the lowest unit price.
+
+13. Find the name of the customer who ordered the largest total quantity across all orders.
+
+14. Which product was ordered the most times by customers in Mexico?
+
+15. Which customer has the highest average order quantity per product?
