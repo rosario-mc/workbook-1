@@ -1,0 +1,211 @@
+1. Find all products that have more than 100 units in stock.
+Grandma's Boysenberry Spread
+Gustaf's Knckebrd
+Geitost
+Sasquatch Ale
+Inlagd Sill
+Boston Crab Meat
+Pt chinois
+Sirop d'rable
+Rd Kaviar
+Rhnbru Klosterbier
+
+
+2. Get the first 5 customers whose company name starts with the letter "S".
+Sant Gourmet
+Save-a-lot Markets
+Seven Seas Imports
+Simons bistro
+Spcialits du monde
+
+3. Show all orders that contain product ID 42.
+38	14:55:56	SELECT * FROM northwind.`order details`
+ WHERE ProductID = 42	30 row(s) returned	0.000 sec / 0.000 sec
+ 10248	42	9.8000	10	0
+ 10309	42	11.2000	2	0
+ 10311	42	11.2000	6	0
+ 10332	42	11.2000	10	0
+ 10345	42	11.2000	9	0
+ 10404	42	11.2000	40	0
+ 10463	42	11.2000	50	0
+ 10492	42	11.2000	20	0
+ 10498	42	14.0000	30	0
+ 10516	42	14.0000	20	0
+ 10571	42	14.0000	28	0
+ 10588	42	14.0000	100	0
+ 10625	42	14.0000	5	0
+ 10652	42	14.0000	20	0
+ 10663	42	14.0000	30	0
+ 10673	42	14.0000	6	0
+ 10680	42	14.0000	40	0
+ 10746	42	14.0000	28	0
+ 10767	42	14.0000	2	0
+ 10776	42	14.0000	12	0
+ 10777	42	14.0000	20	0
+ 10845	42	14.0000	42	0
+ 10856	42	14.0000	20	0
+ 10882	42	14.0000	25	0
+ 10923	42	14.0000	10	0
+ 10996	42	14.0000	40	0
+ 11002	42	14.0000	24	0
+ 11007	42	14.0000	14	0
+ 11013	42	14.0000	4	0
+ 11035	42	14.0000	30	0
+
+4. Which products have exactly 0 units on order?
+Alice Mutton
+Boston Crab Meat
+Camembert Pierrot
+Carnarvon Tigers
+Chai
+Chartreuse verte
+Chef Anton's Cajun Seasoning
+Chef Anton's Gumbo Mix
+Cte de Blaye
+Escargots de Bourgogne
+Filo Mix
+Flotemysost
+Geitost
+Genen Shouyu
+Grandma's Boysenberry Spread
+Guaran Fantstica
+Gudbrandsdalsost
+Gula Malacca
+Gumbr Gummibrchen
+Gustaf's Knckebrd
+Ikura
+Inlagd Sill
+Jack's New England Clam Chowder
+Konbu
+Lakkalikri
+Laughing Lumberjack Lager
+Louisiana Fiery Hot Pepper Sauce
+Manjimup Dried Apples
+Mishi Kobe Niku
+Mozzarella di Giovanni
+Nord-Ost Matjeshering
+Northwoods Cranberry Sauce
+NuNuCa Nu-Nougat-Creme
+Original Frankfurter grne Soe
+Pavlova
+Perth Pasties
+Pt chinois
+Queso Manchego La Pastora
+Raclette Courdavault
+Ravioli Angelo
+Rd Kaviar
+Rhnbru Klosterbier
+Rssle Sauerkraut
+Sasquatch Ale
+Schoggi Schokolade
+Singaporean Hokkien Fried Mee
+Sir Rodney's Marmalade
+Sirop d'rable
+Spegesild
+Steeleye Stout
+Tarte au sucre
+Teatime Chocolate Biscuits
+Thringer Rostbratwurst
+Tofu
+Tourtire
+Tunnbrd
+Uncle Bob's Organic Dried Pears
+Valkoinen suklaa
+Vegie-spread
+Zaanse koeken
+
+
+5. List 10 products with a UnitPrice between 15 and 30.
+Chai
+Chang
+Chef Anton's Cajun Seasoning
+Chef Anton's Gumbo Mix
+Grandma's Boysenberry Spread
+Uncle Bob's Organic Dried Pears
+Queso Cabrales
+Tofu
+Genen Shouyu
+Pavlova
+
+6. Find all customers whose company name ends in "Inc.".
+None
+
+7. Show all products that have less than 10 units in stock and more than 0 units on order.
+Sir Rodney's Scones
+Gorgonzola Telino
+Mascarpone Fabioli
+Rogede sild
+Louisiana Hot Spiced Okra
+Scottish Longbreads
+Longlife Tofu
+
+8. List all customers with a CustomerID that contains the letter "A".
+ALFKI	Alfreds Futterkiste
+ANATR	Ana Trujillo Emparedados y helados
+ANTON	Antonio Moreno Taquera
+AROUT	Around the Horn
+
+9. Find the first 3 entries in the Order Details table where quantity is greater than 50.
+10258	5	17.0000	65	0
+10263	16	13.9000	60	0
+10263	30	20.7000	60	0
+
+10. Show the details of the product with ProductName equal to "Chai".
+ProductID:1	ProductName:Chai	SupplierID:1	CategoryID: 1	QuantityPerUnits:10 boxes x 20 bags	UnitPrice18.0000	UnitsInStock:39	UnitsOnOrder:0	Reorder Level:10	Discontinued:0
+
+MINI QUEST:
+1. What is the product name of the last item that the customer “The Big Cheese” ordered?
+Mozzarella di Giovanni
+
+2. How many units in stock are there for the product ordered in the largest quantity?
+Product ID: 39 UnitsInStock: 69
+ProductID: 64 UnitsInStock: 22
+
+3. Which customers have ordered product ID 7?
+Rattlesnake Canyon Grocery
+Split Rail Beer & Ale
+Victuailles en stock
+B's Beverages
+Bon app'
+Bottom-Dollar Markets
+Eastern Connection
+Ernst Handel
+Folies gourmandes
+Folk och f HB
+Gourmet Lanchonetes
+La corne d'abondance
+LILA-Supermercado
+Ocano Atlntico Ltda.
+Ottilies Kseladen
+QUICK-Stop
+Reggiani Caseifici
+Sant Gourmet
+Save-a-lot Markets
+Vaffeljernet
+
+4. Find the most recent order placed and what product(s) were included in it.
+Chef Anton's Cajun Seasoning
+Grandma's Boysenberry Spread
+Uncle Bob's Organic Dried Pears
+Northwoods Cranberry Sauce
+Ikura
+Queso Manchego La Pastora
+Konbu
+Tofu
+Pavlova
+Sir Rodney's Marmalade
+Tunnbrd
+Mascarpone Fabioli
+Chartreuse verte
+Jack's New England Clam Chowder
+Spegesild
+Filo Mix
+Pt chinois
+Camembert Pierrot
+Wimmers gute Semmelkndel
+Louisiana Hot Spiced Okra
+Rd Kaviar
+Rhnbru Klosterbier
+Original Frankfurter grne Soe
+
+5. Which products are in stock, have units on order, and have been ordered at least once?

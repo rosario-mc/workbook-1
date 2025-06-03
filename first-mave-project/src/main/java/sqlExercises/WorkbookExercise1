@@ -1,0 +1,49 @@
+1. What categories of products does Northwind Traders sell?
+beverages, condiments, confections, dairy products, graisn/cereals, meat/poultry, produce, seafood
+
+2. What is the name of a product that sounds interesting to you?
+confections- i love deserts/sweets
+
+3. What are some of the countries in which we have customers?
+germany, mexico, uk, sweden, france, spain, canada, argentina, switzerland, brazil, austria, italy, USA, venezuela, ireland, belgium, portugal, norway, denmark, finland, poland
+
+4. What date was our first order placed? How did you determine that?
+1996-07-04: retrived from orders table under orderDate colum
+
+5. What date was our last order placed?
+1998-05-06
+
+6. How many customers do we currently have?
+93?
+
+7. Do we have any suppliers in South America? Europe? Africa?
+only SA, Europe
+
+8. What is our most expensive product?
+cte de blaye unitPrice: 263.5000
+
+9. What is our least expensive product?
+geitost unitPrice:2.5000
+
+10. We have a customer named "The Big Cheese" if I wanted to get details
+about their last order from us how would you find that information?
+a. What tables would you use?
+customers, orders, order details.
+
+b. How would you link the data in the tables you are using
+ID or primary key
+
+c. What information might I want to know about their order?
+i. Order Date? 1998-04-01
+
+ii. Sales Total?
+unitPrice: 34.8
+quantity: 2
+Total:69.6?
+
+iii. Product Name?
+product ID 72
+Mozzarella di Giovanni
+
+iv. Is there other information that you might find interesting?
+NO DISOCUNT Was given
