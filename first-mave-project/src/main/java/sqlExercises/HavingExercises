@@ -39,8 +39,9 @@ SELECT UnitPrice, ProductName FROM northwind.products
 WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM northwind.products);
 
 2. Find all customers who placed the most recent order.
-SELECT OrderDate, CustomerID FROM northwind.orders
-WHERE OrderDate = (SELECT MAX(OrderDate) FROM northwind.orders);
+SELECT CompanyName, CustomerID FROM northwind.Customers
+WHERE CustomerID IN ( SELECT OrderDate, CustomerID FROM northwind.orders
+WHERE OrderDate = (SELECT MAX(OrderDate) FROM northwind.orders));
 
 3. List all products that have never been ordered.
 SELECT ProductID FROM northwind.products
@@ -52,9 +53,8 @@ WHERE SupplierID IN (SELECT SupplierID FROM northwind.products
 WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM northwind.products));
 
 5. List all orders where the quantity ordered was more than the average quantity of all orders.
-SELECT OrderID FROM northwind.orders
-WHERE OrderID IN (SELECT OrderID FROM northwind.`order details`
-WHERE Quantity > (SELECT AVG(Quantity) FROM northwind.`order details`));
+SELECT DISTINCT OrderID , Quantity FROM northwind.`order details`
+WHERE Quantity > (SELECT AVG(Quantity) FROM northwind.`order details`);
 
 🧩 Level 2: Two Nested Queries
 6. Find the product names of all products that were ordered in the order with the highest total quantity.
