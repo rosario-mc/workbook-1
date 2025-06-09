@@ -9,6 +9,7 @@ public class Northwind {
 
         if (args.length != 2) {
             System.out.println("Application needs 2 parameters to run.");
+            System.exit(1);
         }
 
         String username = args[0];
