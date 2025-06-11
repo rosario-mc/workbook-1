@@ -1,4 +1,4 @@
-package Mod03.ExercisewithDisplay;
+package sqlExercises.Mod03.ExercisewithDisplay;
 
 import java.sql.*;
 import java.util.Scanner;

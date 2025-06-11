@@ -1,4 +1,4 @@
-package SakilaMovies;
+package sqlExercises.SakilaMovies;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 

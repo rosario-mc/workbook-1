@@ -1,4 +1,4 @@
-package Mod03.ExercisewithDisplay;
+package sqlExercises.Mod03.ExercisewithDisplay;
 
 public class App {
     public static void main(String[] args) {

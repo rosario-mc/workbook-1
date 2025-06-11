@@ -1,6 +1,4 @@
-package Mod03.ExerciseWithDataSource;
-
-import javax.sql.DataSource;
+package sqlExercises.Mod03.ExerciseWithDataSource;
 
 public class App {
     public static void main(String[] args) {

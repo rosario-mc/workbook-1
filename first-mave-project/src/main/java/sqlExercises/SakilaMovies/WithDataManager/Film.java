@@ -1,4 +1,4 @@
-package SakilaMovies.WithDataManager;
+package sqlExercises.SakilaMovies.WithDataManager;
 
 public class Film {
     private int film_id;

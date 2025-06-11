@@ -1,4 +1,4 @@
-package Mod03;
+package sqlExercises.Mod03;
 
 import java.sql.*;
 

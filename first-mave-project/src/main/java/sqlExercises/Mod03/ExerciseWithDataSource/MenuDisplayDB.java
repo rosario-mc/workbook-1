@@ -1,4 +1,4 @@
-package Mod03.ExerciseWithDataSource;
+package sqlExercises.Mod03.ExerciseWithDataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 

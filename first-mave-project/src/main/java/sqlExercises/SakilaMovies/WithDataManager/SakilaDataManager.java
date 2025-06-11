@@ -1,4 +1,4 @@
-package SakilaMovies.WithDataManager;
+package sqlExercises.SakilaMovies.WithDataManager;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

@@ -1,4 +1,4 @@
-package SakilaMovies;
+package sqlExercises.SakilaMovies;
 
 public class App {
     public static void main(String[] args) {

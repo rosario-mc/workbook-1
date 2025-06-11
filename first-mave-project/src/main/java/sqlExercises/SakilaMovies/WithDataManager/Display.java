@@ -1,4 +1,4 @@
-package SakilaMovies.WithDataManager;
+package sqlExercises.SakilaMovies.WithDataManager;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
