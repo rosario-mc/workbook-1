@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Display {
     static Scanner scanner = new Scanner(System.in);
-    private static LanguageDAO dataManager;
+    private static LanguageDAO lan_dao;
 
     public static void start(String[] args) {
         if (args.length < 2) {
@@ -20,7 +20,7 @@ public class Display {
         ds.setUrl("jdbc:mysql://localhost:3306/sakila");
         ds.setUsername(username);
         ds.setPassword(password);
-        dataManager = new LanguageDAO(ds);
+        lan_dao = new LanguageDAO(ds);
         getInput(ds);
     }
 
@@ -40,19 +40,19 @@ public class Display {
             List<Language> languageList;
             switch (choice) {
                 case "1":
-                    languageList = dataManager.getAll();
+                    languageList = lan_dao.getAll();
                     printLanguages(languageList);
                     break;
                 case "2":
                     System.out.print("\nPlease Enter A Language ID: ");
                     int lan_id = Integer.parseInt(scanner.nextLine());
-                    languageList = dataManager.getById(lan_id);
+                    languageList = lan_dao.getById(lan_id);
                     printLanguages(languageList);
                     break;
                 case "3":
                     System.out.print("\nPlease Enter A Language Name: ");
                     String lanName = scanner.nextLine();
-                    languageList = dataManager.getByName(lanName);
+                    languageList = lan_dao.getByName(lanName);
                     printLanguages(languageList);
                     break;
                 case "0":
